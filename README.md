@@ -1,10 +1,20 @@
 # AI & Society
 
-「인공지능과 현대사회」 W04 수업용 자료. 루트 페이지는 학생 실습 **AI for Oceans**의 2단계와 8단계를 안내합니다. 두 단계 모두 Code.org의 공식 게임으로 직접 연결됩니다.
+「인공지능과 현대사회」 W04 수업용 자료입니다.
 
-- [학생 실습 안내](https://vida-holgada.github.io/AI-Society/): 물고기/아님 이름표를 붙이고, 짝과 같은 주관적 단어를 각자 학습시킨 결과를 비교합니다.
-- [2단계: 물고기 구별](https://studio.code.org/courses/oceans/units/1/lessons/1/levels/2)
-- [8단계: 새 단어 가르치기](https://studio.code.org/courses/oceans/units/1/lessons/1/levels/8)
-- [COMPAS 보조 자료](https://vida-holgada.github.io/AI-Society/compas-classroom/): 교수자가 점수 문턱과 집단별 오류를 시연할 때 사용할 수 있습니다. [수업 순서·자료 출처·실행 안내](compas-classroom/README.md)
+## 학생 실습: AI for Oceans
 
-GitHub Pages는 `main` 브랜치의 루트(`/`)에서 게시합니다. 외부 라이브러리나 빌드 과정이 필요하지 않습니다.
+[한국어 실습 안내](https://vida-holgada.github.io/AI-Society/)에서 처음부터 따라 합니다.
+
+1. 한국어로 시작하고 화면 설명을 읽습니다.
+2. 물고기와 물고기가 아닌 것에 이름표를 붙입니다.
+3. 실행하여 결과를 확인하고, 다음 활동에서 다른 해양생물에게 생기는 문제를 살펴봅니다.
+4. 바다에 남겨야 하는 것을 기준으로 다시 가르칩니다.
+5. 처음 결과와 비교하고 관찰·수정·사용 목적을 소감문에 정리합니다.
+
+핵심 질문: 물고기가 아니면 바다에서 치워도 될까요? ‘물고기 아님’이라는 분류를 ‘치워도 됨’이라는 결정에 사용하는 문제를 살펴봅니다. 이번 실습은 재학습 결과 비교까지 진행합니다.
+
+- [Code.org 한국어 첫 화면](https://studio.code.org/courses/oceans/units/1/lessons/1/levels/1?locale=ko-KR)
+- [COMPAS 보조 자료](https://vida-holgada.github.io/AI-Society/compas-classroom/)
+
+GitHub Pages는 main 브랜치의 루트에서 게시합니다. 외부 라이브러리나 빌드 과정은 필요하지 않습니다.
