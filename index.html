@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="인공지능과 현대사회 W04 학생 실습: AI for Oceans에서 이름표와 학습 자료가 분류 결과를 바꾸는 과정을 살펴봅니다.">
+  <title>W04 학생 실습 · AI for Oceans | 인공지능과 현대사회</title>
+  <style>
+    :root { color-scheme:light; --paper:#f7f7f4; --white:#fff; --ink:#202626; --muted:#626a70; --line:#dcdeda; --purple:#4f55ab; --violet-bg:#eeeff8; --green:#128260; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:SUIT,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif; font-size:18px; line-height:1.65; word-break:keep-all; }
+    a { color:var(--purple); text-underline-offset:4px; } a:hover { text-decoration-thickness:2px; } a:focus-visible { outline:3px solid var(--purple); outline-offset:4px; }
+    header { border-bottom:1px solid var(--line); }
+    .bar { max-width:1120px; margin:auto; padding:20px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
+    .brand { color:var(--ink); font-weight:700; text-decoration:none; letter-spacing:-.02em; }
+    .course { font-size:14px; color:var(--muted); }
+    main { max-width:1120px; padding:54px 32px 80px; margin:auto; }
+    .eyebrow { color:var(--purple); font-size:14px; font-weight:700; letter-spacing:.04em; margin:0 0 14px; }
+    h1 { font-size:clamp(36px,5vw,60px); letter-spacing:-.055em; line-height:1.18; margin:0; max-width:860px; text-wrap:balance; }
+    .lede { max-width:760px; margin:22px 0 50px; color:#42494a; font-size:clamp(18px,2vw,22px); line-height:1.65; text-wrap:pretty; }
+    h2 { font-size:clamp(25px,3vw,33px); line-height:1.35; letter-spacing:-.035em; margin:0 0 20px; text-wrap:balance; }
+    .steps { border-top:2px solid var(--purple); }
+    .step { display:grid; grid-template-columns:145px minmax(0,1fr); gap:24px; padding:30px 0 34px; border-bottom:1px solid var(--line); }
+    .step-label { color:var(--purple); font-size:15px; font-weight:700; padding-top:6px; }
+    .step h3 { font-size:clamp(22px,2.6vw,28px); margin:0 0 8px; line-height:1.35; letter-spacing:-.025em; }
+    .step p { max-width:730px; margin:0 0 15px; }
+    .launch { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:10px 18px; border-radius:6px; background:var(--purple); color:#fff; font-size:16px; font-weight:700; text-decoration:none; margin-top:6px; }
+    .launch:hover { background:#3f4596; } .launch:focus-visible { outline:3px solid var(--green); outline-offset:3px; }
+    .after { display:grid; grid-template-columns:minmax(0,1.65fr) minmax(250px,1fr); gap:56px; margin-top:56px; }
+    .questions { border-top:2px solid var(--green); padding-top:22px; }
+    .questions h2 { margin-bottom:18px; } .questions ol { margin:0; padding-left:1.6em; } .questions li { padding-left:7px; margin:0 0 14px; } .questions li::marker { color:var(--green); font-weight:700; }
+    aside { border-top:2px solid var(--line); padding-top:22px; font-size:16px; color:var(--muted); } aside h2 { color:var(--ink); font-size:21px; margin-bottom:12px; } aside p { margin:0 0 14px; }
+    footer { border-top:1px solid var(--line); padding:20px 32px 32px; color:var(--muted); font-size:13px; } footer div { max-width:1056px; margin:auto; }
+    @media (max-width:700px) { .bar { padding:16px 20px; display:block; } .course { display:block; margin-top:2px; } main { padding:38px 20px 58px; } .lede { margin-bottom:38px; } .step { grid-template-columns:1fr; gap:3px; padding:25px 0 29px; } .step-label { padding:0; } .after { grid-template-columns:1fr; gap:34px; margin-top:42px; } .launch { width:100%; } footer { padding-inline:20px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+  <header><div class="bar"><a class="brand" href="./">AI &amp; Society</a><span class="course">인공지능과 현대사회 · W04</span></div></header>
+  <main>
+    <p class="eyebrow">학생 실습 · AI for Oceans</p>
+    <h1>이름표를 붙이면 AI는 무엇을 배울까?</h1>
+    <p class="lede">직접 물고기 그림에 이름표를 붙이고 결과를 살펴봅니다. 같은 단어를 골라도 어떤 사례를 가르쳤는지에 따라 결과가 달라지는지 짝과 비교해 보세요.</p>
+    <section class="steps" aria-label="실습 단계">
+      <div class="step">
+        <div class="step-label">01 · 구별하기</div>
+        <div><h3>무엇을 바다에 남길까?</h3><p>2단계에서 그림에 ‘물고기’ 또는 ‘Not 물고기’라는 이름표를 붙입니다. 결과를 살펴본 뒤, ‘물고기가 아니다’를 ‘바다에서 치워야 한다’와 같은 뜻으로 써도 되는지 생각해 보세요.</p><a class="launch" href="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/2" target="_blank" rel="noopener noreferrer" aria-label="AI for Oceans 2단계 새 탭에서 열기">2단계 열기 ↗</a></div>
+      </div>
+      <div class="step">
+        <div class="step-label">02 · 비교하기</div>
+        <div><h3>‘화난’ 물고기는 어떤 모습일까?</h3><p>8단계에서 짝과 같은 단어를 고른 뒤, 각자 기준을 정해 물고기에 이름표를 붙입니다. 결과에 나타난 생김새를 비교하고, 더 살펴보고 싶다면 ‘더 많이 훈련하세요’로 예시를 보완해 보세요.</p><a class="launch" href="https://studio.code.org/courses/oceans/units/1/lessons/1/levels/8" target="_blank" rel="noopener noreferrer" aria-label="AI for Oceans 8단계 새 탭에서 열기">8단계 열기 ↗</a></div>
+      </div>
+    </section>
+    <div class="after">
+      <section class="questions" aria-labelledby="discussion-title"><h2 id="discussion-title">짝과 이야기할 질문</h2><ol><li>각자 ‘화난’ 물고기로 고른 특징은 무엇이었나요?</li><li>같은 이름표를 가르쳤는데 결과가 달랐다면, 학습 사례와 기준 중 무엇이 영향을 주었을까요?</li><li>사람에게 이런 이름표를 붙여 판단한다면, 어떤 근거와 사용 목적을 확인해야 할까요?</li></ol></section>
+      <aside aria-labelledby="supplement-title"><h2 id="supplement-title">수업 보조 자료</h2><p>COMPAS 사례는 점수의 문턱과 집단별 오류를 살펴보는 별도 자료입니다. 오늘의 학생 실습은 위 AI for Oceans 두 단계입니다.</p><a href="./compas-classroom/">COMPAS 보조 자료 보기 ↗</a></aside>
+    </div>
+  </main>
+  <footer><div>활동과 게임: <a href="https://studio.code.org/s/oceans/lessons/1/" target="_blank" rel="noopener noreferrer">Code.org, AI for Oceans</a>. 이 페이지는 수업용 안내이며 게임은 Code.org에서 열립니다.</div></footer>
+</body>
+</html>
